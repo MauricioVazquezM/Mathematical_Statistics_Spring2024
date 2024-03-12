@@ -1,2 +1,2 @@
-# Assignmen 1 Topics
+# Assignment 1 Topics
 
