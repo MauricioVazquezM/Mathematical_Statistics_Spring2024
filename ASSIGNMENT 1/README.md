@@ -20,3 +20,6 @@ n! \approx \sqrt{2 \pi n} \left( \frac{n}{e} \right)^n \left(1 + \frac{1}{12n} +
 
 ## Simulation
 
+
+
+## Central Limit Theorem
