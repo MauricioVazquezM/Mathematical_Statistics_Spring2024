@@ -19,46 +19,13 @@ n! \approx \sqrt{2 \pi n} \left( \frac{n}{e} \right)^n \left(1 + \frac{1}{12n} +
 
 ## Central Limit Theorem
 
-Let $\{X_1, X_2, ..., X_n\}$ be a sequence of $\n$ independent and identically distributed (i.i.d.) random variables with mean $(\mu\)$ and variance \(\sigma^2 > 0\). Then, as \(n\) approaches infinity, the distribution of the standardized sum
+Let $\{X_1, X_2, ..., X_n\}$ be a sequence of ${\n\}$ independent and identically distributed (i.i.d.) random variables with mean ${\mu\}$ and variance ${\sigma^2 > 0\}$. Then, as ${\n\}$ approaches infinity, the distribution of the standardized sum
 
-$\Z_n = \frac{\sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}}$
+${\Z_n = \frac{\sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}}}$
 
-converges in distribution to a standard normal distribution \(N(0, 1)\), that is
+converges in distribution to a standard normal distribution ${\N(0, 1)\}$, that is
 
-\[ Z_n \xrightarrow{d} N(0, 1) \, as \, n \to \infty. \]
-
-Let 
-```math 
-\{X_1, X_2, ..., X_n\} 
-```
-be a sequence of
-```math 
-n 
-```
-independent and identically distributed (i.i.d.) random variables with mean
-```math 
-mu 
-```
-and variance 
-```math
-sigma^2 > 0 
-```
-Then, as 
-```math
-n 
-```
-approaches infinity, the distribution of the standardized sum
-```math
-Z_n = \frac{\sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}}
-```
-converges in distribution to a standard normal distribution 
-```math
-N(0, 1) 
-```
-that is
-```math
- Z_n \xrightarrow{d} N(0, 1) \, as \, n \to \infty. 
-```
+${\ Z_n \xrightarrow{d} N(0, 1) \, as \, n \to \infty. }$
 
 - The Central Limit Theorem (CLT) is a fundamental principle in mathematical statistics that explains the behavior of the sum or average of a large number of independent, identically distributed random variables. Regardless of the original distribution of these variables, as the sample size grows, the distribution of their sum or average tends towards a normal (Gaussian) distribution.
 
