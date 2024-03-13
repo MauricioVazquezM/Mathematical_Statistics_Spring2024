@@ -18,6 +18,15 @@ n! \approx \sqrt{2 \pi n} \left( \frac{n}{e} \right)^n \left(1 + \frac{1}{12n} +
 - These additional terms make the formula more complex but significantly improve precision for smaller values of n. The Stirling approximation is a classic example of how mathematical methods can simplify and facilitate the calculation of functions that would otherwise be very difficult to manage, especially for large numbers.
 
 ## Central Limit Theorem
+
+Let $\{X_1, X_2, ..., X_n\}$ be a sequence of $\n$ independent and identically distributed (i.i.d.) random variables with mean $(\mu\)$ and variance \(\sigma^2 > 0\). Then, as \(n\) approaches infinity, the distribution of the standardized sum
+
+$\Z_n = \frac{\sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}}$
+
+converges in distribution to a standard normal distribution \(N(0, 1)\), that is
+
+\[ Z_n \xrightarrow{d} N(0, 1) \, as \, n \to \infty. \]
+
 Let 
 ```math 
 \{X_1, X_2, ..., X_n\} 
