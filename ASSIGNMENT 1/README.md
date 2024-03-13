@@ -19,17 +19,6 @@ n! \approx \sqrt{2 \pi n} \left( \frac{n}{e} \right)^n \left(1 + \frac{1}{12n} +
 
 ## Central Limit Theorem
 
-```math
-Let \(\{X_1, X_2, ..., X_n\}\) be a sequence of \(n\) independent and identically distributed (i.i.d.) random variables with mean \(\mu\) and variance \(\sigma^2 > 0\). Then, as \(n\) approaches infinity, the distribution of the standardized sum
-
-\[ Z_n = \frac{\sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}} \]
-
-converges in distribution to a standard normal distribution \(N(0, 1)\), that is
-
-\[ Z_n \xrightarrow{d} N(0, 1) \, as \, n \to \infty. \]
-
-```
-
 - The Central Limit Theorem (CLT) is a fundamental principle in mathematical statistics that explains the behavior of the sum or average of a large number of independent, identically distributed random variables. Regardless of the original distribution of these variables, as the sample size grows, the distribution of their sum or average tends towards a normal (Gaussian) distribution.
 
 - This theorem holds under fairly general conditions, making it incredibly powerful and widely applicable in the field of statistics and beyond. The CLT underpins many statistical methods and hypotheses testing techniques, providing a justification for the use of the normal distribution in estimating probabilities and setting confidence intervals, especially for large samples.
