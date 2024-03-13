@@ -19,11 +19,19 @@ n! \approx \sqrt{2 \pi n} \left( \frac{n}{e} \right)^n \left(1 + \frac{1}{12n} +
 
 ## Central Limit Theorem
 
+<<<<<<< HEAD
 Let $\{X_1, X_2, ..., X_n\}$ be a sequence of ${n}$ independent and identically distributed (i.i.d.) random variables with mean ${\mu\}$ and variance ${\sigma^2 > 0\}$. Then, as ${n}$ approaches infinity, the distribution of the standardized sum:
 
 ${Z_n = \frac{\sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}}}$
 
 converges in distribution to a standard normal distribution ${N(0, 1)}$, that is...
+=======
+Let $\{X_1, X_2, ..., X_n\}$ be a sequence of ${n}$ independent and identically distributed (i.i.d.) random variables with mean ${\mu\}$ and variance ${\sigma^2 > 0\}$. Then, as ${n}$ approaches infinity, the distribution of the standardized sum
+
+${Z_n = \frac{\sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}}}$
+
+converges in distribution to a standard normal distribution ${N(0, 1)}$, that is
+>>>>>>> b7b77e745a9be76c8961eb80f9b75a6911a1e281
 
 ${\ Z_n \xrightarrow{d} N(0, 1) \, as \, n \to \infty. }$
 
