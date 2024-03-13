@@ -20,7 +20,7 @@ n! \approx \sqrt{2 \pi n} \left( \frac{n}{e} \right)^n \left(1 + \frac{1}{12n} +
 ## Central Limit Theorem
 Let
 ```math 
-{X_1, X_2, ..., X_n\} 
+\{X_1, X_2, ..., X_n\} 
 ```
 be a sequence of
 ```math 
