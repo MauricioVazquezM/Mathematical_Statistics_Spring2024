@@ -18,7 +18,7 @@ n! \approx \sqrt{2 \pi n} \left( \frac{n}{e} \right)^n \left(1 + \frac{1}{12n} +
 - These additional terms make the formula more complex but significantly improve precision for smaller values of n. The Stirling approximation is a classic example of how mathematical methods can simplify and facilitate the calculation of functions that would otherwise be very difficult to manage, especially for large numbers.
 
 ## Central Limit Theorem
-<p align="center">Let </p>
+Let 
 ```math 
 \{X_1, X_2, ..., X_n\} 
 ```
