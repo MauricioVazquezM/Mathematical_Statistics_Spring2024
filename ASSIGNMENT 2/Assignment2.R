@@ -3,6 +3,7 @@
 # AUXILIARS
 # Defining our libraries
 library(stats)
+library(ggplot2)
 
 # Setting our seed
 set.seed(33)
@@ -178,6 +179,49 @@ cat(sprintf("Likelihood Function Estimation for Gianca: %.5e\n", like_gianca),
     sprintf("Log Likelihood Function Estimation for Gianca: %.5f\n", log_like_gianca))
 cat("\n")
 
+
 ##### BULLET "c" #####
 
+# Simulation parameters, given the data got it on 3b
+alpha_3b_mau <- 1.59154    
+lambda_3b_mau <- 0.23386
 
+alpha_3b_aitana <- 1.16911
+lambda_3b_aitana <- 0.15485
+
+alpha_3b_gianca <- 2.67183
+lambda_3b_gianca <- 0.32248
+
+# Defining number of simulations and sample size
+N <- 3000
+n <- 30
+
+# Initialiazing vectors for alpha and lambda values
+alpha_hats <- numeric(N)
+beta_hats <- numeric(N)
+
+# For loop for simulation
+for(i in 1:N) {
+  
+  # Simulations
+  datos <- rgamma(n, shape = alpha_3b_aitana, scale = 1/lambda_3b_aitana) 
+  
+  # Calculating estimations
+  alpha_hat <- mean(datos)^2 / var(datos)
+  beta_hat <- (var(datos) / mean(datos))
+  
+  # Storing estimations
+  alpha_hats[i] <- alpha_hat
+  beta_hats[i] <- beta_hat
+  
+}
+
+# Plotting histogram for alpha
+ggplot() + 
+  geom_histogram(aes(x = alpha_hats), binwidth = 0.1, fill = "skyblue", color = "black") +
+  labs(title = "Histograma de la distribcuion del estimador α", x = "Estimador de α", y = "Frecuencia")
+
+# Plotting histogram for beta
+ggplot() + 
+  geom_histogram(aes(x = beta_hats), binwidth = 1, fill = "lightgreen", color = "black") +
+  labs(title = "Histograma de la distribcuion del estimador β", x = "Estimador de β", y = "Frecuencia")
