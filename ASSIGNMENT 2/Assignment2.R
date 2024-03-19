@@ -204,7 +204,7 @@ beta_hats <- numeric(N)
 for(i in 1:N) {
   
   # Simulations
-  datos <- rgamma(n, shape = alpha_3b_gianca, scale = 1/lambda_3b_gianca) 
+  datos <- rgamma(n, shape = alpha_3b_mau, scale = 1/lambda_3b_mau) 
   
   # Calculating estimations
   alpha_hat <- mean(datos)^2 / var(datos)
