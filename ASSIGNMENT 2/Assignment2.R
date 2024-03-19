@@ -204,7 +204,7 @@ beta_hats <- numeric(N)
 for(i in 1:N) {
   
   # Simulations
-  datos <- rgamma(n, shape = alpha_3b_mau, scale = 1/lambda_3b_mau) 
+  datos <- rgamma(n, shape = alpha_3b_gianca, scale = 1/lambda_3b_gianca) 
   
   # Calculating estimations
   alpha_hat <- mean(datos)^2 / var(datos)
@@ -219,9 +219,87 @@ for(i in 1:N) {
 # Plotting histogram for alpha
 ggplot() + 
   geom_histogram(aes(x = alpha_hats), binwidth = 0.1, fill = "skyblue", color = "black") +
-  labs(title = "Histograma de la distribcuion del estimador α", x = "Estimador de α", y = "Frecuencia")
+  labs(title = "Histograma de la distribcuion del estimador α_hat de Mau", x = "Estimador de α", y = "Frecuencia")
 
 # Plotting histogram for beta
 ggplot() + 
   geom_histogram(aes(x = beta_hats), binwidth = 1, fill = "lightgreen", color = "black") +
-  labs(title = "Histograma de la distribcuion del estimador β", x = "Estimador de β", y = "Frecuencia")
+  labs(title = "Histograma de la distribcuion del estimador β_hat de Mau", x = "Estimador de β", y = "Frecuencia")
+
+
+######## QUESTION 4 ########
+
+##### BULLET "f" #####
+
+# Defining number of simulations and sample size
+N <- 5000
+n <- 30
+iters <- 5
+
+# Initialiazing vectors for alpha and lambda values
+alpha_hats_MoM <- numeric(N)
+alpha_hats_MLE <- numeric(N)
+
+# Defining angular distribution function
+angular_inv <- function(y, alpha){
+  return((2*y-1)/alpha) 
+}
+
+# Defining angular distribution random function
+rangular <- function(n, alpha){
+  res <- numeric(n)
+  for(i in 1:n){
+    y0 <- runif(1, min=0, max = 1)
+    generated <- angular_inv(y0, alpha)
+    res[i] <- generated
+  }
+  return(res)
+}
+
+# Defining the sum
+sum_func <- function(alp, x){
+  sum(datos / (1 + alp * x))
+}
+
+# Defining the derivative of the sum
+der_sum_funct <- function(alp, x){
+  sum((-x**2)/(1+(alp*x))**2)
+}
+
+# For loop for simulation
+for(i in 1:N) {
+  
+  # Simulations
+  datos <- rangular(n, alpha = 0.75) 
+  
+  # Calculating estimations
+  alpha_hat1 <- 3*mean(datos)
+  
+  # Intermediate step
+  alp0 <- alpha_hat1
+  for(j in 1:iters){
+    
+    alp0 <- alp0 - sum_func(alp0, datos)/der_sum_funct(alp0, datos)
+    
+  }
+  
+  # calculating estimation or alpha MLE
+  alpha_hat2 <- alp0
+  
+  # Storing estimations
+  alpha_hats_MoM[i] <- alpha_hat1
+  alpha_hats_MLE[i] <- alpha_hat2
+  
+}
+
+# Plotting histogram for alpha_MoM
+ggplot() + 
+  geom_histogram(aes(x = alpha_hats_MoM), binwidth = 0.1, fill = "skyblue", color = "black") +
+  labs(title = "Histograma de la distribcuion del estimador α_hat por MoM", x = "Estimador de α", y = "Frecuencia")
+
+# Plotting histogram for alpha_MLE
+b <- 4
+alpha_hats_MLE_c <- subset(alpha_hats_MLE, !(alpha_hats_MLE>=4))
+ggplot() + 
+  geom_histogram(aes(x = alpha_hats_MLE_c), binwidth = 0.1, fill = "lightgreen", color = "black") +
+  labs(title = "Histograma de la distribcuion del estimador α_hat por EML", x = "Estimador de α", y = "Frecuencia")
