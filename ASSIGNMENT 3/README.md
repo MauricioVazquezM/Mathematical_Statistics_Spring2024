@@ -28,16 +28,15 @@ Confidence intervals (CIs) are a key statistical tool used to estimate the range
 **3. Calculation:** To compute a confidence interval, you need:
   - ***Point Estimate:*** This is the value calculated from the sample data, which best estimates the parameter of interest (e.g., sample mean).
   - ***Margin of Error (MoE):*** This is added and subtracted from the point estimate and is calculated using the standard error (SE) of the estimate and the critical value from the distribution that corresponds to the desired confidence level (often a z-score from the standard normal distribution for large samples or a t-score from the t-distribution for smaller samples).
-
-<br>
 - The formula is generally:
 
 ```math
-( \text{Point Estimate} \pm (\text{Critical Value} \times \text{Standard Error}) )
+( \text{Point Estimate} \pm (\text{Critical Value} \times \text{Standard Error}))
 ```
 
 ***4. Interpretation:*** If a 95% CI for the mean is (10, 20), it suggests that there is a 95% chance that the true population mean falls between 10 and 20. It's important to note that the interval either contains the true mean or it doesn't; the confidence level pertains to the method's long-run accuracy.
 
 ***5. Usage:*** Confidence intervals are used extensively across scientific research, market research, policy analysis, and other fields that require estimation of population parameters with a quantified uncertainty. They provide more information than single-point estimates by illustrating the range of plausible values for the parameter and the precision of the estimate.
+
 <br>
 Overall, confidence intervals are a fundamental concept in statistics for making inferences about population parameters from sample data, emphasizing both the estimate's precision and reliability.
