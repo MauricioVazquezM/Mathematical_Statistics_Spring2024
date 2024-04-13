@@ -33,7 +33,7 @@ Confidence intervals (CIs) are a key statistical tool used to estimate the range
 - The formula is generally:
 
 ```math
-\\text{Point Estimate} \pm (\text{Critical Value} \times \text{Standard Error}) \
+( \text{Point Estimate} \pm (\text{Critical Value} \times \text{Standard Error}) \)
 ```
 
 ***4. Interpretation:*** If a 95% CI for the mean is (10, 20), it suggests that there is a 95% chance that the true population mean falls between 10 and 20. It's important to note that the interval either contains the true mean or it doesn't; the confidence level pertains to the method's long-run accuracy.
