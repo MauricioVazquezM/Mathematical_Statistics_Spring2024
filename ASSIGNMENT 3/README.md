@@ -28,6 +28,7 @@ Confidence intervals (CIs) are a key statistical tool used to estimate the range
 **3. Calculation:** To compute a confidence interval, you need:
   - ***Point Estimate:*** This is the value calculated from the sample data, which best estimates the parameter of interest (e.g., sample mean).
   - ***Margin of Error (MoE):*** This is added and subtracted from the point estimate and is calculated using the standard error (SE) of the estimate and the critical value from the distribution that corresponds to the desired confidence level (often a z-score from the standard normal distribution for large samples or a t-score from the t-distribution for smaller samples).
+<br>
 - The formula is generally:
 
 ```math
