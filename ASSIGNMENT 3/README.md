@@ -16,6 +16,26 @@ UMVUEs are particularly valued because they offer a balance between accuracy (du
 These estimators are widely used in various statistical applications, particularly in hypothesis testing, confidence interval estimation, and model parameter estimation, where optimal accuracy and precision are crucial.
 
 
+## Width of probability intervals
+
+The width of probability intervals, often discussed in the context of confidence intervals or prediction intervals in statistics, is an important measure as it indicates the precision of an estimate or the uncertainty in predictions. Here’s a concise overview:
+
+**1. Definition:** The width of a probability interval is the numerical difference between the upper and lower bounds of the interval. This width reflects the range of plausible values for an estimated parameter or a predicted value.
+
+**2. Factors Influencing Width:**
+  - ***Sample Size:*** Larger sample sizes typically provide more information about the population, leading to narrower intervals. This reduction in width is due to the decreased standard error as the sample size increases.
+  - ***Confidence Level:*** Higher confidence levels (e.g., 99% vs. 95%) require wider intervals. This is because to be more confident that the interval includes the true parameter, the range must be extended.
+  - ***Population Variability:*** More variability in the population results in wider intervals. When data points are spread out more, the interval must be wider to capture the same level of confidence in containing the population parameter.
+  
+**3. Implications:**
+  - ***Precision:*** Narrower intervals indicate greater precision in estimation or prediction. They suggest less uncertainty about the parameter's true value.
+  - ***Reliability and Trade-offs:*** While narrower intervals are desirable for precision, they might come with trade-offs in terms of confidence level and sample size. Achieving very narrow intervals might require larger sample sizes or accepting a lower confidence level.
+
+**4. Applications:** Understanding the width of probability intervals is crucial in fields like survey analysis, quality control, risk assessment, and any scenario where quantifying the uncertainty of estimates or predictions is necessary.
+
+<br>
+Overall, the width of probability intervals is a key aspect of statistical inference, providing valuable insights into the precision of estimates and the degree of uncertainty associated with them.
+
 ## Confidence intervals
 
 Confidence intervals (CIs) are a key statistical tool used to estimate the range within which a population parameter (like a mean or proportion) is expected to fall with a certain level of confidence. Here's a succinct breakdown of their main elements:
@@ -28,8 +48,7 @@ Confidence intervals (CIs) are a key statistical tool used to estimate the range
 **3. Calculation:** To compute a confidence interval, you need:
   - ***Point Estimate:*** This is the value calculated from the sample data, which best estimates the parameter of interest (e.g., sample mean).
   - ***Margin of Error (MoE):*** This is added and subtracted from the point estimate and is calculated using the standard error (SE) of the estimate and the critical value from the distribution that corresponds to the desired confidence level (often a z-score from the standard normal distribution for large samples or a t-score from the t-distribution for smaller samples).
-<br>
-- The formula is generally:
+  - ***The formula is generally:***
 
 ```math
 ( \text{Point Estimate} \pm (\text{Critical Value} \times \text{Standard Error}))
