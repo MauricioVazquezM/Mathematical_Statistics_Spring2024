@@ -3,7 +3,7 @@
 #### Loading library
 library(stats)
 
-############ A. NORM DISTRIBUTION
+############ A. NORM DISTRIBUTION ############
 
 ## Defining sigmas and confidence intervals vectors
 sigmas <- c(1.0,2.0,5.0)
@@ -52,7 +52,7 @@ norm_ta <- normal_table_function(sigmas, confidence_intervals)
 # Visualizing results
 print(norm_ta)
 
-############ B. CHI-SQUARE
+############ B. CHI-SQUARE ############
 
 ## Defining sigmas and confidence intervals vectors
 n_vector <- c(5, 10, 15)
