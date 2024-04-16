@@ -52,13 +52,14 @@ norm_ta <- normal_table_function(sigmas, confidence_intervals)
 # Visualizing results
 print(norm_ta)
 
+
 ############ B. CHI-SQUARE ############
 
 ## Defining sigmas and confidence intervals vectors
-degreesF_vector <- c(5, 10, 15)
+degreesF_vector <- c(5, 10, 20)
 confidence_intervals <- c(0.90, 0.95, 0.99)
 
-## Creating function for easy usage
+## Creating function for easy usage(same weight tails)
 chi_table_function_SWtails <- function(n_vector, conf_int_vector){
   
   ## Defining list to store outputs
